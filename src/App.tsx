@@ -1,7 +1,11 @@
 import React from "react"
+// import { Main } from "pages"
+import { Header } from "ui/organisms"
 
-const App: React.FC = () => {
-  return <></>
+export const App: React.FC = () => {
+  return (
+    <>
+      <Header>dsf</Header>
+    </>
+  )
 }
-
-export default App
