@@ -15,7 +15,7 @@ export const Header: FC = ({ children }) => {
         React
         <span>Sushi</span>
       </NavLink>
-      {children}
+      <div className={cls.children}>{children}</div>
     </Header>
   )
 }
