@@ -1,7 +1,7 @@
 import React from "react"
 import { Route, Switch } from "react-router-dom"
 import { Header } from "ui"
-import { Navigation } from "features"
+import { Navigation, Basket } from "features"
 import { Menu } from "pages"
 
 export const App: React.FC = () => {
@@ -9,6 +9,7 @@ export const App: React.FC = () => {
     <>
       <Header>
         <Navigation />
+        <Basket />
       </Header>
       <Switch>
         <Route path="/" exact={true} component={Menu} />
