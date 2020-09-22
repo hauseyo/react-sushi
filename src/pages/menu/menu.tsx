@@ -6,7 +6,7 @@ const { TabPane } = Tabs
 
 export const Menu: FC = () => {
   return (
-    <Tabs defaultActiveKey="1">
+    <Tabs defaultActiveKey="1" centered>
       <TabPane tab={<TabTitle src="nigiri" title="Нигири" />} key="1">
         kj
       </TabPane>
