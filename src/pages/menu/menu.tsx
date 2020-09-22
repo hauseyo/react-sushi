@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import { Tabs } from "antd"
-import { TabTitle } from "ui/molecules"
+import { TabTitle } from "ui"
 
 const { TabPane } = Tabs
 
