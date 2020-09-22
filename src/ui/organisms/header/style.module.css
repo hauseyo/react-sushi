@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Baloo Tammudu 2", cursive;
+  font-size: 1.8rem;
+  color: #1d1c1c;
+}
+
+.header span {
+  color: #ed3330;
+}
+
+.header img {
+  max-width: 70px;
+}
