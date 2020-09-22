@@ -1,12 +1,10 @@
 import React, { FC } from "react"
 import { NavLink } from "react-router-dom"
-import { Layout } from "antd"
 import cls from "./style.module.css"
 
 export const Header: FC = ({ children }) => {
-  const { Header } = Layout
   return (
-    <Header className={cls.header}>
+    <header className={cls.header}>
       <NavLink to="/">
         <img
           src={process.env.PUBLIC_URL + "/assets/logo/sushi-icon.png"}
@@ -16,6 +14,6 @@ export const Header: FC = ({ children }) => {
         <span>Sushi</span>
       </NavLink>
       <div className={cls.children}>{children}</div>
-    </Header>
+    </header>
   )
 }
