@@ -1,5 +1,10 @@
 import React from "react"
+import { Button } from "antd"
 
-export const Button = () => {
-  return <button>Button</button>
+interface IProps {
+  text: string
+}
+
+export const MyButton = ({ text }: IProps) => {
+  return <Button>{text}</Button>
 }
