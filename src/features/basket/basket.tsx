@@ -1,6 +1,6 @@
 import React, { FC } from "react"
-import { Button } from "antd"
+import { MyButton } from "ui"
 
 export const Basket: FC = () => {
-  return <Button>Корзина</Button>
+  return <MyButton text="Корзина" />
 }
