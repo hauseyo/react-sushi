@@ -7,3 +7,7 @@
 .title img {
   max-width: 70px;
 }
+
+.title p {
+  margin-bottom: 0;
+}
