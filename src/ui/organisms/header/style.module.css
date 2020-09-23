@@ -1,7 +1,4 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   z-index: 50;
   background: white;
@@ -9,7 +6,16 @@
   box-shadow: 0 0 5px #ec5450;
 }
 
-.header > a {
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content > a {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -18,11 +24,11 @@
   color: #1d1c1c;
 }
 
-.header span {
+.content span {
   color: #ed3330;
 }
 
-.header img {
+.content img {
   max-width: 70px;
 }
 
