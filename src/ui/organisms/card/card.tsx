@@ -32,7 +32,7 @@ export const MyCard: FC<props> = ({ src, title, price, quantity }) => {
         title={<MyTitle level={3} text={title} />}
         description={
           <div className={cls.description}>
-            <span>1 шт.</span> <span>{price}</span>
+            <span>1 шт.</span> <span>{price} руб.</span>
           </div>
         }
       />
