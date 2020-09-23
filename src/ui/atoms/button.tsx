@@ -2,9 +2,10 @@ import React from "react"
 import { Button } from "antd"
 
 interface IProps {
-  text: string
+  text?: string
+  icon?: JSX.Element
 }
 
-export const MyButton = ({ text }: IProps) => {
-  return <Button>{text}</Button>
+export const MyButton = ({ text, icon }: IProps) => {
+  return <Button icon={icon}>{text}</Button>
 }
