@@ -1,6 +1,6 @@
 import React from "react"
 import { Route, Switch } from "react-router-dom"
-import { Header } from "ui"
+import { Content, Header } from "ui"
 import { Navigation, Basket } from "features"
 import { Menu } from "pages"
 
@@ -11,9 +11,11 @@ export const App: React.FC = () => {
         <Navigation />
         <Basket />
       </Header>
-      <Switch>
-        <Route path="/" exact={true} component={Menu} />
-      </Switch>
+      <Content>
+        <Switch>
+          <Route path="/" exact={true} component={Menu} />
+        </Switch>
+      </Content>
     </>
   )
 }
