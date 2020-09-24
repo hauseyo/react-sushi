@@ -9,12 +9,12 @@ export const App: React.FC = () => {
     <>
       <Header>
         <Navigation />
-        <Basket />
       </Header>
       <Content>
         <Switch>
           <Route path="/" exact={true} component={Menu} />
         </Switch>
+        <Basket />
       </Content>
     </>
   )
