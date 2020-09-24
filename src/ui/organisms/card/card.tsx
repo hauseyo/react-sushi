@@ -3,7 +3,7 @@ import { Card } from "antd"
 import { PlusOutlined, MinusOutlined } from "@ant-design/icons"
 import Meta from "antd/lib/card/Meta"
 import cls from "./style.module.css"
-import { MyButton, MyTitle } from "ui"
+import { MyButton } from "ui"
 
 interface props {
   src: string
@@ -29,7 +29,7 @@ export const MyCard: FC<props> = ({ src, title, price, quantity }) => {
       ]}
     >
       <Meta
-        title={<MyTitle level={3} text={title} />}
+        title={title}
         description={
           <div className={cls.description}>
             <span>1 шт.</span> <span>{price} руб.</span>
