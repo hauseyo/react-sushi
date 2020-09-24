@@ -23,9 +23,9 @@ export const MyCard: FC<props> = ({ src, title, price, quantity }) => {
         />
       }
       actions={[
-        <MyButton icon={<MinusOutlined />} />,
+        <MyButton icon={<MinusOutlined />} onClick={() => {}} />,
         <span>{quantity || ""}</span>,
-        <MyButton icon={<PlusOutlined />} />,
+        <MyButton icon={<PlusOutlined />} onClick={() => {}} />,
       ]}
     >
       <Meta
