@@ -8,5 +8,9 @@ interface props {
   level: 1 | 2 | 3 | 4 | 5
 }
 export const MyTitle: FC<props> = ({ text, level }) => {
-  return <Title level={level}>{text}</Title>
+  return (
+    <Title level={level} style={{ color: "#EC5450" }}>
+      {text}
+    </Title>
+  )
 }
