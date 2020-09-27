@@ -37,6 +37,12 @@ export const CardNigiri: FC = () => {
               src={`/nigiri/${img}`}
               title={name}
               price={price}
+              description={description}
+              weight={weight}
+              protein={protein}
+              fat={fat}
+              carb={carb}
+              cal={cal}
             />
           )
         }
