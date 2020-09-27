@@ -1,9 +1,10 @@
 import React, { FC, useState } from "react"
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 import { Menu } from "antd"
 
 export const Navigation: FC = () => {
-  const [path, setPath] = useState<string>(window.location.pathname)
+  const { pathname } = useLocation()
+  const [path, setPath] = useState<string>(pathname)
 
   return (
     <Menu
