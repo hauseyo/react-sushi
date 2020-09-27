@@ -8,6 +8,7 @@
 
 .card img {
   padding: 24px;
+  cursor: pointer;
 }
 
 .description {
