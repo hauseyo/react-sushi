@@ -47,9 +47,17 @@ export const MyCard: FC<props> = ({
           />
         }
         actions={[
-          <MyButton icon={<MinusOutlined />} onClick={() => {}} />,
+          <MyButton
+            icon={<MinusOutlined />}
+            onClick={() => {}}
+            type="primary"
+          />,
           <span>{quantity || ""}</span>,
-          <MyButton icon={<PlusOutlined />} onClick={() => {}} />,
+          <MyButton
+            icon={<PlusOutlined />}
+            onClick={() => {}}
+            type="primary"
+          />,
           <MyButton icon={<InfoOutlined />} onClick={() => setModal(true)} />,
         ]}
       >

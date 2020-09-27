@@ -15,7 +15,7 @@ export const MyModal: FC<Props> = ({ title, visible, onCancel, children }) => {
       title={title}
       visible={visible}
       onCancel={onCancel}
-      footer={[<MyButton text="Закрыть" onClick={onCancel} />]}
+      footer={[<MyButton text="Закрыть" onClick={onCancel} type="primary" />]}
     >
       {children}
     </Modal>
