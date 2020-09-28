@@ -19,6 +19,8 @@ interface props {
   fat: number
   carb: number
   cal: number
+  increase: () => void
+  dicrease: () => void
 }
 
 export const MyCard: FC<props> = ({
@@ -32,6 +34,8 @@ export const MyCard: FC<props> = ({
   fat,
   carb,
   cal,
+  increase,
+  dicrease,
 }) => {
   const [modal, setModal] = useState<boolean>(false)
 
@@ -49,13 +53,13 @@ export const MyCard: FC<props> = ({
         actions={[
           <MyButton
             icon={<MinusOutlined />}
-            onClick={() => {}}
+            onClick={dicrease}
             type="primary"
           />,
           <span>{quantity || ""}</span>,
           <MyButton
             icon={<PlusOutlined />}
-            onClick={() => {}}
+            onClick={increase}
             type="primary"
           />,
           <MyButton icon={<InfoOutlined />} onClick={() => setModal(true)} />,

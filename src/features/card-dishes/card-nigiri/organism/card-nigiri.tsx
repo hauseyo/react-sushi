@@ -1,6 +1,8 @@
 import React, { FC } from "react"
 import * as db from "db/nigiri.json"
 import { CardContent, MyCard } from "ui"
+// import { useStore } from "effector-react"
+import { updateBasket } from "lib/shop-basket"
 
 type cardInfo = {
   name: string
@@ -16,6 +18,7 @@ type cardInfo = {
 
 export const CardNigiri: FC = () => {
   const data = (db as any).default
+  // const basket = useStore($shopBasket)
 
   return (
     <CardContent>
@@ -43,6 +46,13 @@ export const CardNigiri: FC = () => {
               fat={fat}
               carb={carb}
               cal={cal}
+              quantity={0}
+              increase={() => {
+                updateBasket({ price, name, img, quantity: 50 })
+              }}
+              dicrease={() => {
+                updateBasket({ price, name, img, quantity: 30 })
+              }}
             />
           )
         }
