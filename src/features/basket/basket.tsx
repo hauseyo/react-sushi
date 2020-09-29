@@ -2,15 +2,18 @@ import React, { FC, useState } from "react"
 import { ShoppingCartOutlined } from "@ant-design/icons"
 import { Modal } from "antd"
 import { MyButton } from "ui"
+import { useStore } from "effector-react"
+import { $totalPrice } from "lib/shop-basket"
 
 export const Basket: FC = () => {
   const [modalOpened, setModalOpened] = useState<boolean>(false)
+  const price = useStore($totalPrice)
 
   return (
     <>
       <MyButton
         onClick={() => setModalOpened(!modalOpened)}
-        text="23 руб."
+        text={`${price.toFixed(2)} руб.`}
         type="primary"
         size="large"
         style={{

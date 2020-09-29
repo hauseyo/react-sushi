@@ -1,4 +1,4 @@
-import { createEvent, createStore } from "effector"
+import { createEvent, createStore, Store } from "effector"
 interface IPayload {
   price: number
   name: string
@@ -21,7 +21,7 @@ export const $shopBasket = createStore<IItem>({}).on(
   })
 )
 
-const $filteredBasket = $shopBasket.map(obj => {
+const $filteredBasket: Store<IItem> = $shopBasket.map(obj => {
   const filteredObj: IItem = {}
 
   for (let key in obj) {
@@ -31,4 +31,14 @@ const $filteredBasket = $shopBasket.map(obj => {
   return filteredObj
 })
 
-$filteredBasket.watch(s => console.log("filtered", s))
+export const $totalPrice: Store<number> = $filteredBasket.map(obj => {
+  let total = 0
+
+  for (let key in obj) {
+    total += obj[key].quantity * obj[key].price
+  }
+
+  return total
+})
+
+$totalPrice.watch(s => console.log(s))
