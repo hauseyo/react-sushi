@@ -1,32 +1,24 @@
 import { createEvent, createStore } from "effector"
-
-interface IItem {
+interface IPayload {
   price: number
   name: string
   quantity: number
   img: string
 }
+interface IItem {
+  [key: string]: IPayload
+}
 
 // Events
-export const updateBasket = createEvent<IItem>()
+export const updateBasket = createEvent<IPayload>()
 
 // Stores
-export const $shopBasket = createStore<IItem[]>([]).on(
+export const $shopBasket = createStore<IItem>({}).on(
   updateBasket,
-  (state, payload) => {
-    if (state.length === 0) {
-      return [...state, payload]
-    }
-
-    const qwe = state.forEach((el, id) => {
-      console.log(el)
-      if (el.name === payload.name) el.quantity = payload.quantity
-      return [...state]
-    })
-    console.log(qwe)
-
-    return qwe
-  }
+  (state, payload) => ({
+    ...state,
+    [payload.name]: { ...payload, quantity: payload.quantity },
+  })
 )
 
 $shopBasket.watch((s) => console.log("watcher", s))
