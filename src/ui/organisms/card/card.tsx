@@ -74,6 +74,7 @@ export const MyCard: FC<props> = ({
         visible={modal}
         onCancel={() => setModal(false)}
       >
+        <CardImg src={src} />
         <MyTitle text={title} level={3} />
         <Gist gist="Состав" value={description} />
         <Gist gist="Вес" value={`${weight} г.`} />
