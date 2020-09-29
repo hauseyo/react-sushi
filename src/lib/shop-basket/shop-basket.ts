@@ -17,8 +17,18 @@ export const $shopBasket = createStore<IItem>({}).on(
   updateBasket,
   (state, payload) => ({
     ...state,
-    [payload.name]: { ...payload, quantity: payload.quantity },
+    [payload.name]: { ...payload },
   })
 )
 
-$shopBasket.watch((s) => console.log("watcher", s))
+const $filteredBasket = $shopBasket.map(obj => {
+  const filteredObj: IItem = {}
+
+  for (let key in obj) {
+    if (obj[key].quantity > 0) filteredObj[key] = obj[key]
+  }
+
+  return filteredObj
+})
+
+$filteredBasket.watch(s => console.log("filtered", s))
