@@ -35,6 +35,11 @@ export const Basket: FC = () => {
             onClick={() => setModalOpened(false)}
             text="Закрыть"
           />,
+          <MyButton
+            key="2"
+            onClick={() => setModalOpened(false)}
+            text="Заказать"
+          />,
         ]}
         onCancel={() => setModalOpened(false)}
       >
