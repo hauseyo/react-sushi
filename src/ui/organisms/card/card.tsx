@@ -7,6 +7,7 @@ import { MyButton } from "ui"
 import { MyModal } from "../modal/modal"
 import { MyTitle } from "ui/atoms"
 import { Gist } from "ui/molecules/gist/gist"
+import { CardImg } from "ui/atoms/card-img"
 
 interface props {
   src: string
@@ -43,20 +44,14 @@ export const MyCard: FC<props> = ({
     <>
       <Card
         className={cls.card}
-        cover={
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/dishes/${src}.png`}
-            alt="sushi"
-            onClick={() => setModal(true)}
-          />
-        }
+        cover={<CardImg src={src} onClick={() => setModal(true)} />}
         actions={[
           <MyButton
             icon={<MinusOutlined />}
             onClick={dicrease}
             type="primary"
           />,
-          <span>{quantity || ""}</span>,
+          quantity || "",
           <MyButton
             icon={<PlusOutlined />}
             onClick={increase}
