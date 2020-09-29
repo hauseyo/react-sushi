@@ -11,7 +11,7 @@ export const Navigation: FC = () => {
       mode="horizontal"
       selectedKeys={[path]}
       style={{ borderBottom: "none", fontSize: "1.2rem" }}
-      onClick={(e) => setPath(e.key.toString())}
+      onClick={e => setPath(e.key.toString())}
     >
       <Menu.Item key="/">
         <NavLink to="/">Меню</NavLink>
@@ -19,7 +19,7 @@ export const Navigation: FC = () => {
       <Menu.Item key="/about">
         <NavLink to="/about">О нас</NavLink>
       </Menu.Item>
-      <Menu.Item key="/reviews">
+      <Menu.Item key="/reviews" style={{ marginRight: 0 }}>
         <NavLink to="/reviews">Отзывы</NavLink>
       </Menu.Item>
     </Menu>
