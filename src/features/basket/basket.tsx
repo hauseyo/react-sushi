@@ -12,6 +12,7 @@ export const Basket: FC = () => {
         onClick={() => setModalOpened(!modalOpened)}
         text="23 руб."
         type="primary"
+        size="large"
         style={{
           position: "fixed",
           bottom: "10%",

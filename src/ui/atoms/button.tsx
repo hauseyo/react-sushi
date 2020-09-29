@@ -6,12 +6,20 @@ interface IProps {
   icon?: JSX.Element
   style?: CSSProperties
   type?: "primary" | "ghost"
+  size?: "large" | "small"
   onClick: () => void
 }
 
-export const MyButton = ({ text, icon, type, style, onClick }: IProps) => {
+export const MyButton = ({
+  text,
+  icon,
+  type,
+  style,
+  size,
+  onClick,
+}: IProps) => {
   return (
-    <Button icon={icon} type={type} style={style} onClick={onClick}>
+    <Button icon={icon} type={type} style={style} size={size} onClick={onClick}>
       {text}
     </Button>
   )
