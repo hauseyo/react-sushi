@@ -1,6 +1,6 @@
 import React, { FC } from "react"
-import { CardContent, MyCard } from "ui"
 import { useStore } from "effector-react"
+import { CardContent, MyCard } from "ui"
 import { $shopBasket, updateBasket } from "lib/shop-basket"
 
 type cardInfo = {

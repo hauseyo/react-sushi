@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import { Modal } from "antd"
-import { MyButton } from "ui/atoms"
+import { MyButton } from "ui"
 
 type Props = {
   title: string
@@ -15,7 +15,9 @@ export const MyModal: FC<Props> = ({ title, visible, onCancel, children }) => {
       title={title}
       visible={visible}
       onCancel={onCancel}
-      footer={[<MyButton key='1' text="Закрыть" onClick={onCancel} type="primary" />]}
+      footer={[
+        <MyButton key="1" text="Закрыть" onClick={onCancel} type="primary" />,
+      ]}
     >
       {children}
     </Modal>

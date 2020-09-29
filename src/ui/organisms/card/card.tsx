@@ -3,10 +3,8 @@ import { Card } from "antd"
 import { PlusOutlined, MinusOutlined, InfoOutlined } from "@ant-design/icons"
 import Meta from "antd/lib/card/Meta"
 import cls from "./style.module.css"
-import { MyButton } from "ui"
+import { MyButton, Gist, MyTitle } from "ui"
 import { MyModal } from "../modal/modal"
-import { MyTitle } from "ui/atoms"
-import { Gist } from "ui/molecules/gist/gist"
 import { CardImg } from "ui/atoms/card-img"
 
 interface props {
