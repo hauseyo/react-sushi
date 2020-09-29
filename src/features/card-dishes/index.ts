@@ -1,1 +1,1 @@
-export * from "./card-nigiri"
+export * from "./organism"

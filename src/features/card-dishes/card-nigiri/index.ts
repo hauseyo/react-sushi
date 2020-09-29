@@ -1,1 +1,0 @@
-export {CardNigiri} from './organism/card-nigiri'

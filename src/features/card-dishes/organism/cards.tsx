@@ -1,8 +1,7 @@
 import React, { FC } from "react"
-import * as db from "db/nigiri.json"
 import { CardContent, MyCard } from "ui"
-// import { useStore } from "effector-react"
-import { updateBasket } from "lib/shop-basket"
+import { useStore } from "effector-react"
+import { $shopBasket, updateBasket } from "lib/shop-basket"
 
 type cardInfo = {
   name: string
@@ -16,13 +15,17 @@ type cardInfo = {
   cal: number
 }
 
-export const CardNigiri: FC = () => {
-  const data = (db as any).default
-  // const basket = useStore($shopBasket)
+interface IProps {
+  db: any
+  imgDir: string
+}
+
+export const Cards: FC<IProps> = ({ db, imgDir }) => {
+  const basket = useStore($shopBasket)
 
   return (
     <CardContent>
-      {data.map(
+      {db.map(
         ({
           name,
           description,
@@ -37,7 +40,7 @@ export const CardNigiri: FC = () => {
           return (
             <MyCard
               key={name + img}
-              src={`/nigiri/${img}`}
+              src={`${imgDir + img}`}
               title={name}
               price={price}
               description={description}
@@ -46,12 +49,24 @@ export const CardNigiri: FC = () => {
               fat={fat}
               carb={carb}
               cal={cal}
-              quantity={0}
+              quantity={basket[name]?.quantity || 0}
               increase={() => {
-                updateBasket({ price, name, img, quantity: 50 })
+                updateBasket({
+                  price,
+                  name,
+                  img,
+                  quantity: basket[name]?.quantity + 1 || 1,
+                })
               }}
               dicrease={() => {
-                updateBasket({ price, name, img, quantity: 30 })
+                updateBasket({
+                  price,
+                  name,
+                  img,
+                  quantity: basket[name]?.quantity
+                    ? basket[name].quantity - 1
+                    : 0,
+                })
               }}
             />
           )
