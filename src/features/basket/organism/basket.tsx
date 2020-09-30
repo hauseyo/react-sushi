@@ -58,6 +58,7 @@ export const Basket: FC = () => {
           </>
         }
         width={800}
+        footer={<MyButton key="2" text="Заказать" onClick={() => {}} />}
         visible={modalOpened}
         onCancel={() => setModalOpened(false)}
       >

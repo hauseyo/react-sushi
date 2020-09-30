@@ -7,6 +7,7 @@ type Props = {
   width?: number
   visible: boolean
   onCancel: () => void
+  footer?: JSX.Element
   children: JSX.Element[] | JSX.Element | (JSX.Element[] | JSX.Element)[]
 }
 
@@ -15,6 +16,7 @@ export const MyModal: FC<Props> = ({
   visible,
   onCancel,
   width,
+  footer,
   children,
 }) => {
   return (
@@ -25,6 +27,7 @@ export const MyModal: FC<Props> = ({
       width={width}
       footer={[
         <MyButton key="1" text="Закрыть" onClick={onCancel} type="primary" />,
+        footer,
       ]}
     >
       {children}
