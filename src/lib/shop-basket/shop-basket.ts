@@ -40,5 +40,3 @@ export const $totalPrice: Store<number> = $filteredBasket.map(obj => {
 
   return total
 })
-
-$totalPrice.watch(s => console.log(s))
