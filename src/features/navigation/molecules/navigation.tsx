@@ -1,10 +1,12 @@
-import React, { FC, useState } from "react"
+import React, { FC, useEffect, useState } from "react"
 import { NavLink, useLocation } from "react-router-dom"
 import { Menu } from "antd"
 
 export const Navigation: FC = () => {
   const { pathname } = useLocation()
   const [path, setPath] = useState<string>(pathname)
+
+  useEffect(() => setPath(pathname), [pathname])
 
   return (
     <Menu
