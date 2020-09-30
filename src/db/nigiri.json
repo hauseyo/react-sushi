@@ -2,7 +2,7 @@
   {
     "name": "Нигири с тунцом опаленным",
     "description": "Тунец опаленный, стружка тунца, майонез, соус тайский сладкий чили, васаби 0,5 г",
-    "img": "nigiri_with_roast_tuna",
+    "img": "/nigiri/nigiri_with_roast_tuna",
     "price": 3.15,
     "weight": 38,
     "protein": 12.4,
@@ -13,7 +13,7 @@
   {
     "name": "Нигири с тунцом маринованным",
     "description": "Тунец маринованный в соевом соусе, майонез, икра летучей рыбы черная, васаби 0,5 г",
-    "img": "nigiri_with_marinade_tuna",
+    "img": "/nigiri/nigiri_with_marinade_tuna",
     "price": 3.15,
     "weight": 38,
     "protein": 12.6,
@@ -24,7 +24,7 @@
   {
     "name": "Нигири с окунем опаленным",
     "description": "Морской окунь опаленный, майонез, соус тайский сладкий чили, орех кешью, васаби 0,5 г",
-    "img": "nigiri_with_roast_basse",
+    "img": "/nigiri/nigiri_with_roast_basse",
     "price": 2,
     "weight": 33,
     "protein": 6.3,
@@ -35,7 +35,7 @@
   {
     "name": "Нигири с окунем маринованным",
     "description": "Морской окунь маринованный в соевом соусе, икра летучей рыбы оранжевая, майонез, васаби 0,5 г",
-    "img": "nigiri_with_marinade_bass",
+    "img": "/nigiri/nigiri_with_marinade_bass",
     "price": 2,
     "weight": 33,
     "protein": 6.7,
@@ -46,7 +46,7 @@
   {
     "name": "Нигири с лососем опаленным",
     "description": "Лосось опаленный, маринованный редис Такуан, соус тайский сладкий чили, майонез, водоросли Нори , васаби 0,5 г",
-    "img": "nigiri_with_roast_salmon",
+    "img": "/nigiri/nigiri_with_roast_salmon",
     "price": 2.95,
     "weight": 39,
     "protein": 10.9,
@@ -57,7 +57,7 @@
   {
     "name": "Нигири с лососем маринованным",
     "description": "Лосось маринованный в соевом соусе, майонез, икра летучей рыбы красная, васаби 0,5 г",
-    "img": "nigiri_with_marinade_salmon",
+    "img": "/nigiri/nigiri_with_marinade_salmon",
     "price": 2.95,
     "weight": 38,
     "protein": 11,
@@ -68,7 +68,7 @@
   {
     "name": "Эби",
     "description": "Креветка тигровая, васаби 0,5 г",
-    "img": "ebi_new",
+    "img": "/nigiri/ebi_new",
     "price": 3.2,
     "weight": 32,
     "protein": 8.9,
@@ -79,7 +79,7 @@
   {
     "name": "Тай",
     "description": "Морской окунь , васаби 0,5 г",
-    "img": "tai",
+    "img": "/nigiri/tai",
     "price": 1.75,
     "weight": 30,
     "protein": 6.9,
@@ -90,7 +90,7 @@
   {
     "name": "Сяке",
     "description": "Лосось, васаби 0,5 г",
-    "img": "syace_new",
+    "img": "/nigiri/syace_new",
     "price": 2.55,
     "weight": 35,
     "protein": 11.8,
@@ -101,7 +101,7 @@
   {
     "name": "Магуро",
     "description": "Тунец, васаби 0,5 г",
-    "img": "maguro_new",
+    "img": "/nigiri/maguro_new",
     "price": 2.9,
     "weight": 35,
     "protein": 12.8,
@@ -112,7 +112,7 @@
   {
     "name": "Тамаго",
     "description": "Японский омлет, соус Терияки, кунжут, васаби 0,5 г",
-    "img": "unagi_new",
+    "img": "/nigiri/unagi_new",
     "price": 1.55,
     "weight": 44,
     "protein": 6.1,
@@ -123,7 +123,7 @@
   {
     "name": "Унаги",
     "description": "Угорь копченый, соус Терияки, кунжут, васаби 0,5 г",
-    "img": "tamago_new",
+    "img": "/nigiri/tamago_new",
     "price": 3.4,
     "weight": 44,
     "protein": 6.1,
