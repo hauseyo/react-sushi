@@ -4,6 +4,7 @@ import { ShoppingCartOutlined } from "@ant-design/icons"
 import { MyButton, Gist, MyModal, CardImg } from "ui"
 import { $totalPrice, $filteredBasket } from "lib/shop-basket"
 import cls from "./style.module.css"
+import { Counter } from "../molecule/counter"
 
 export const Basket: FC = () => {
   const [modalOpened, setModalOpened] = useState<boolean>(false)
@@ -14,10 +15,17 @@ export const Basket: FC = () => {
 
   const renderDishes = () => {
     return Object.keys(basket).map(el => {
-      const { img } = basket[el]
+      const { img, name, quantity, price } = basket[el]
       return (
-        <div key={img} className={cls.bcad}>
+        <div key={img} className={cls.bcard}>
           <CardImg src={img} />
+          <span>{name}</span>
+          <Counter
+            increase={() => {}}
+            dicrease={() => {}}
+            quantity={quantity}
+          />
+          <span>{price * quantity} руб.</span>
         </div>
       )
     })
@@ -46,6 +54,7 @@ export const Basket: FC = () => {
             &nbsp;Корзина
           </>
         }
+        width={800}
         visible={modalOpened}
         onCancel={() => setModalOpened(false)}
       >
