@@ -3,10 +3,10 @@ import { Modal } from "antd"
 import { MyButton } from "ui"
 
 type Props = {
-  title: string
+  title: string | JSX.Element
   visible: boolean
   onCancel: () => void
-  children: JSX.Element[] | JSX.Element
+  children: JSX.Element[] | JSX.Element | (JSX.Element[] | JSX.Element)[]
 }
 
 export const MyModal: FC<Props> = ({ title, visible, onCancel, children }) => {
