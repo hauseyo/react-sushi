@@ -17,10 +17,10 @@ type cardInfo = {
 
 interface IProps {
   db: any
-  imgDir: string
+  
 }
 
-export const Cards: FC<IProps> = ({ db, imgDir }) => {
+export const Cards: FC<IProps> = ({ db }) => {
   const basket = useStore($shopBasket)
 
   return (
@@ -40,7 +40,7 @@ export const Cards: FC<IProps> = ({ db, imgDir }) => {
           return (
             <MyCard
               key={name + img}
-              src={`${imgDir + img}`}
+              src={img}
               title={name}
               price={price}
               description={description}
