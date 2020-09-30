@@ -15,6 +15,7 @@
 
 .bcard span:last-child {
   font-weight: bold;
+  text-align: right;
 }
 
 .bcard img {
