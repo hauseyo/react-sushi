@@ -3,9 +3,7 @@ import { Card } from "antd"
 import { PlusOutlined, MinusOutlined, InfoOutlined } from "@ant-design/icons"
 import Meta from "antd/lib/card/Meta"
 import cls from "./style.module.css"
-import { MyButton, Gist, MyTitle } from "ui"
-import { MyModal } from "../modal/modal"
-import { CardImg } from "ui/atoms/card-img"
+import { MyButton, Gist, MyTitle, MyModal, CardImg } from "ui"
 
 interface props {
   src: string
