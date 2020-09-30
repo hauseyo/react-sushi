@@ -1,8 +1,8 @@
 import React from "react"
 import { Route, Switch } from "react-router-dom"
 import { Content, Footer, Header } from "ui"
-import { Navigation, Basket } from "features"
-import { Menu } from "pages"
+import { Navigation } from "features"
+import { Menu, About } from "pages"
 
 export const App: React.FC = () => {
   return (
@@ -13,8 +13,8 @@ export const App: React.FC = () => {
       <Content>
         <Switch>
           <Route path="/" exact={true} component={Menu} />
+          <Route path="/about" component={About} />
         </Switch>
-        <Basket />
       </Content>
       <Footer />
     </>
