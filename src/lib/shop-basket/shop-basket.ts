@@ -21,7 +21,7 @@ export const $shopBasket = createStore<IItem>({}).on(
   })
 )
 
-const $filteredBasket: Store<IItem> = $shopBasket.map(obj => {
+export const $filteredBasket: Store<IItem> = $shopBasket.map(obj => {
   const filteredObj: IItem = {}
 
   for (let key in obj) {
