@@ -28,7 +28,7 @@ export const Basket: FC = () => {
             }
             quantity={quantity}
           />
-          <span>{price * quantity} руб.</span>
+          <span>{(price * quantity).toFixed(2)} руб.</span>
         </div>
       )
     })
