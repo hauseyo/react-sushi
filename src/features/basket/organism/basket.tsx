@@ -2,7 +2,7 @@ import React, { FC, useState } from "react"
 import { useStore } from "effector-react"
 import { ShoppingCartOutlined } from "@ant-design/icons"
 import { MyButton, Gist, MyModal, CardImg } from "ui"
-import { $totalPrice, $filteredBasket } from "lib/shop-basket"
+import { $totalPrice, $filteredBasket, updateBasket } from "lib/shop-basket"
 import cls from "./style.module.css"
 import { Counter } from "../molecule/counter"
 
@@ -11,18 +11,21 @@ export const Basket: FC = () => {
   const price = useStore($totalPrice)
   const basket = useStore($filteredBasket)
 
-  console.log(basket)
-
   const renderDishes = () => {
     return Object.keys(basket).map(el => {
       const { img, name, quantity, price } = basket[el]
+
       return (
         <div key={img} className={cls.bcard}>
           <CardImg src={img} />
           <span>{name}</span>
           <Counter
-            increase={() => {}}
-            dicrease={() => {}}
+            increase={() =>
+              updateBasket({ img, name, price, quantity: quantity + 1 })
+            }
+            dicrease={() =>
+              updateBasket({ img, name, price, quantity: quantity - 1 })
+            }
             quantity={quantity}
           />
           <span>{price * quantity} руб.</span>
