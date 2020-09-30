@@ -1,13 +1,27 @@
 import React, { FC, useState } from "react"
 import { useStore } from "effector-react"
 import { ShoppingCartOutlined } from "@ant-design/icons"
-import { Modal } from "antd"
-import { MyButton, Gist } from "ui"
-import { $totalPrice } from "lib/shop-basket"
+import { MyButton, Gist, MyModal, CardImg } from "ui"
+import { $totalPrice, $filteredBasket } from "lib/shop-basket"
+import cls from "./style.module.css"
 
 export const Basket: FC = () => {
   const [modalOpened, setModalOpened] = useState<boolean>(false)
   const price = useStore($totalPrice)
+  const basket = useStore($filteredBasket)
+
+  console.log(basket)
+
+  const renderDishes = () => {
+    return Object.keys(basket).map(el => {
+      const { img } = basket[el]
+      return (
+        <div key={img} className={cls.bcad}>
+          <CardImg src={img} />
+        </div>
+      )
+    })
+  }
 
   return (
     <>
@@ -25,26 +39,19 @@ export const Basket: FC = () => {
         }}
         icon={<ShoppingCartOutlined />}
       />
-      <Modal
-        title="Корзина"
+      <MyModal
+        title={
+          <>
+            <ShoppingCartOutlined />
+            &nbsp;Корзина
+          </>
+        }
         visible={modalOpened}
-        footer={[
-          <MyButton
-            key="1"
-            type="primary"
-            onClick={() => setModalOpened(false)}
-            text="Закрыть"
-          />,
-          <MyButton
-            key="2"
-            onClick={() => setModalOpened(false)}
-            text="Заказать"
-          />,
-        ]}
         onCancel={() => setModalOpened(false)}
       >
+        {renderDishes()}
         <Gist gist="К оплате" value={`${price.toFixed(2)} руб.`} />
-      </Modal>
+      </MyModal>
     </>
   )
 }

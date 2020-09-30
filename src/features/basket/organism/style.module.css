@@ -1,0 +1,7 @@
+.bcad {
+  display: flex;
+}
+
+.bcard > img {
+  max-width: 250px;
+}
