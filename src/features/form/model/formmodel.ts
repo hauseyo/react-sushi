@@ -1,12 +1,15 @@
 import { createEffect, createEvent, restore, sample } from "effector"
+import { db } from "fb.config"
 import { IForm } from "../types"
 
 // Events
 export const getFormValues = createEvent<IForm>()
 
 // Effects
-const fxSendReviewToDB = createEffect((values: IForm) => {
-  console.log(values)
+const fxSaveReviewToDB = createEffect((values: IForm) => {
+  db.ref(`${(Math.random() * 100000000).toFixed()}`).set({
+    ...values,
+  })
 })
 
 // Stores
@@ -16,5 +19,5 @@ const $form = restore(getFormValues, null)
 
 sample({
   source: $form,
-  target: fxSendReviewToDB,
+  target: fxSaveReviewToDB,
 })
