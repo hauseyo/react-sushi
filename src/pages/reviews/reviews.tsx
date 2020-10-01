@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import { MyTitle } from "ui"
-import { MyForm } from "features"
+import { MyForm, ReviewList } from "features"
 import cls from "./style.module.css"
 
 export const Reviews: FC = () => {
@@ -9,6 +9,7 @@ export const Reviews: FC = () => {
       <MyForm />
       <div>
         <MyTitle text="Отзывы" level={2} />
+        <ReviewList />
       </div>
     </div>
   )
