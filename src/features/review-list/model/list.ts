@@ -6,6 +6,7 @@ interface IList {
     username: string
     email: string
     area: string
+    date: string
   }
 }
 
@@ -22,5 +23,3 @@ export const $reviewList = createStore<IList>({}).on(
   getList,
   (prev, payload) => ({ ...prev, ...payload })
 )
-
-$reviewList.watch(s => console.log(s))
