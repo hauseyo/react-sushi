@@ -2,7 +2,7 @@ import React from "react"
 import { Route, Switch } from "react-router-dom"
 import { Content, Footer, Header } from "ui"
 import { Navigation } from "features"
-import { Menu, About } from "pages"
+import { Menu, About, Reviews } from "pages"
 
 export const App: React.FC = () => {
   return (
@@ -14,6 +14,7 @@ export const App: React.FC = () => {
         <Switch>
           <Route path="/" exact={true} component={Menu} />
           <Route path="/about" component={About} />
+          <Route path="/reviews" component={Reviews} />
         </Switch>
       </Content>
       <Footer />
