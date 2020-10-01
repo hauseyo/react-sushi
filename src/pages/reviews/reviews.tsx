@@ -7,7 +7,7 @@ export const Reviews: FC = () => {
   return (
     <div className={cls.reviews}>
       <MyForm />
-      <div>
+      <div className={cls.list}>
         <MyTitle text="Отзывы" level={2} />
         <ReviewList />
       </div>
