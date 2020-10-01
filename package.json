@@ -17,6 +17,7 @@
     "craco-less": "^1.17.0",
     "effector": "^21.3.0",
     "effector-react": "^21.0.6",
+    "firebase": "^7.21.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
