@@ -6,11 +6,12 @@ import { IForm } from "../types"
 export const getFormValues = createEvent<IForm>()
 
 // Effects
-const fxSaveReviewToDB = createEffect((values: IForm) => {
+const fxSaveReviewToDB = createEffect((values: IForm) =>
   db.ref(`${(Math.random() * 100000000).toFixed()}`).set({
     ...values,
+    date: new Date().toLocaleDateString("ru"),
   })
-})
+)
 
 // Stores
 const $form = restore(getFormValues, null)
