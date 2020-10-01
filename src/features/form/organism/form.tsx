@@ -1,12 +1,8 @@
 import React, { FC } from "react"
 import { Input, Form, Button } from "antd"
 import { MyTitle } from "ui"
-
-interface IForm {
-  username: string
-  email: string
-  area: string
-}
+import { IForm } from "../types"
+import { getFormValues } from "../model/formmodel"
 
 export const MyForm: FC = () => {
   const layout = {
@@ -15,7 +11,7 @@ export const MyForm: FC = () => {
   }
 
   const onSubmit = (values: IForm) => {
-    console.log(values)
+    getFormValues(values)
   }
 
   return (
