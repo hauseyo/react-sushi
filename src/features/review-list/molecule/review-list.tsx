@@ -17,6 +17,7 @@ export const ReviewList: FC = () => {
         const { username, area, date } = list[key]
         return (
           <Comment
+            key={`${area}${Math.random()}`}
             author={<span className={cls.author}>{username}</span>}
             content={area}
             datetime={<span className={cls.date}>{date}</span>}
