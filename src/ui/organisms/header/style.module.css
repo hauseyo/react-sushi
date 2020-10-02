@@ -1,0 +1,47 @@
+.header {
+  position: fixed;
+  z-index: 50;
+  background: white;
+  width: 100%;
+  box-shadow: 0 0 5px #ec5450;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Baloo Tammudu 2", cursive;
+  font-size: 1.8rem;
+  color: #1d1c1c;
+}
+
+.content span {
+  color: #ed3330;
+}
+
+.content img {
+  max-width: 70px;
+}
+
+.children {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  font-family: serif;
+}
+
+.children > a {
+  margin: 0 5px;
+  color: black;
+  text-decoration: none;
+}

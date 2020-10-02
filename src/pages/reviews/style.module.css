@@ -1,0 +1,10 @@
+.reviews {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list {
+  max-width: 600px;
+  width: 100%;
+  text-align: right;
+}

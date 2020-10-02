@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Ясай",
+    "description": "Авокадо, огурец, салат Айсберг, итальянский соус, васаби 0,5 г",
+    "img": "/gunkani/yasai",
+    "price": 1.35,
+    "weight": 40,
+    "protein": 3.5,
+    "fat": 7.5,
+    "carb": 37.7,
+    "cal": 232
+  },
+  {
+    "name": "Эби микс",
+    "description": "Креветка тигровая, авокадо, сыр творожный, васаби 0,5 г",
+    "img": "/gunkani/ebi_mix",
+    "price": 3,
+    "weight": 38,
+    "protein": 8.4,
+    "fat": 5,
+    "carb": 35.4,
+    "cal": 224.6
+  },
+  {
+    "name": "Чука микс",
+    "description": "Маринованные водоросли хияши вакаме, ореховый соус, кунжут черный, васаби 0,5 г",
+    "img": "/gunkani/chuca_mix",
+    "price": 2,
+    "weight": 40,
+    "protein": 3.4,
+    "fat": 6.5,
+    "carb": 35.4,
+    "cal": 224.6
+  },
+  {
+    "name": "Тобико Рэд",
+    "description": "Икра летучей рыбы – красная, васаби 0,5 г",
+    "img": "/gunkani/tobiko_red",
+    "price": 2.9,
+    "weight": 35,
+    "protein": 8.4,
+    "fat": 1.5,
+    "carb": 37.4,
+    "cal": 197.6
+  },
+  {
+    "name": "Тобико Грин",
+    "description": "Икра летучей рыбы - зеленая, васаби 0,5 г",
+    "img": "/gunkani/tobiko_green",
+    "price": 2.8,
+    "weight": 35,
+    "protein": 8.4,
+    "fat": 1.5,
+    "carb": 37.4,
+    "cal": 197.6
+  },
+  {
+    "name": "Тобико Блэк",
+    "description": "Икра летучей рыбы – черная, васаби 0,5 г",
+    "img": "/gunkani/tobico_black",
+    "price": 2.8,
+    "weight": 35,
+    "protein": 8.4,
+    "fat": 1.5,
+    "carb": 37.4,
+    "cal": 197.6
+  },
+  {
+    "name": "Спайси тай микс",
+    "description": "Морской окунь жареный, острый соус, укроп, васаби 0,5 г",
+    "img": "/gunkani/spicy_tai_mix",
+    "price": 2.65,
+    "weight": 40,
+    "protein": 10.4,
+    "fat": 10.5,
+    "carb": 3.4,
+    "cal": 276
+  },
+  {
+    "name": "Спайси тай",
+    "description": "Морской окунь, острый соус, орех кешью, васаби 0,5 г",
+    "img": "/gunkani/spicy_tai",
+    "price": 2.3,
+    "weight": 41,
+    "protein": 6.4,
+    "fat": 9.7,
+    "carb": 32.4,
+    "cal": 248
+  },
+  {
+    "name": "Спайси сяке микс",
+    "description": "Лосось жареный, острый соус, маринованный редис Такуан, васаби 0,5 г",
+    "img": "/gunkani/spicy_syace_mix",
+    "price": 2.7,
+    "weight": 43,
+    "protein": 4.8,
+    "fat": 12.7,
+    "carb": 47.4,
+    "cal": 320
+  },
+  {
+    "name": "Спайси сурими",
+    "description": "Крабовые палочки, острый соус, кунжут черный, васаби 0,5 г",
+    "img": "/gunkani/spicy_surimi",
+    "price": 1.8,
+    "weight": 40,
+    "protein": 6.3,
+    "fat": 9.5,
+    "carb": 35.4,
+    "cal": 258.2
+  },
+  {
+    "name": "Спайси магуро",
+    "description": "Тунец, острый соус, стружка тунца, васаби 0,5 г",
+    "img": "/gunkani/spicy_maguro",
+    "price": 3,
+    "weight": 40,
+    "protein": 12.3,
+    "fat": 8.5,
+    "carb": 32.4,
+    "cal": 266.2
+  },
+  {
+    "name": "Спайси кунсей",
+    "description": "Лосось копченый, острый соус, японский омлет, зеленый лук, васаби 0,5 г",
+    "img": "/gunkani/spicy_kunsei",
+    "price": 2.65,
+    "weight": 40,
+    "protein": 12.3,
+    "fat": 8.5,
+    "carb": 32.4,
+    "cal": 266.2
+  }
+]
