@@ -10,6 +10,7 @@
 .bcard > span {
   max-width: 200px;
   min-width: 150px;
+  width: 100%;
   font-size: 24px;
 }
 
@@ -20,4 +21,10 @@
 
 .bcard img {
   max-width: 100px;
+}
+
+@media (max-width: 615px) {
+  .bcard {
+    flex-wrap: wrap;
+  }
 }
