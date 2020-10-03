@@ -8,3 +8,13 @@
   width: 100%;
   text-align: right;
 }
+
+@media (max-width: 750px) {
+  .reviews {
+    flex-wrap: wrap;
+  }
+
+  .list {
+    text-align: start;
+  }
+}
