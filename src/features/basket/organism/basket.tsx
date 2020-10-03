@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react"
 import { useStore } from "effector-react"
-import { ShoppingCartOutlined } from "@ant-design/icons"
+import { ShoppingCartOutlined, DeleteOutlined } from "@ant-design/icons"
 import { MyButton, Gist, MyModal, CardImg } from "ui"
 import { $totalPrice, $filteredBasket, updateBasket } from "lib/shop-basket"
 import cls from "./style.module.css"
@@ -29,6 +29,10 @@ export const Basket: FC = () => {
             quantity={quantity}
           />
           <span>{(price * quantity).toFixed(2)} руб.</span>
+          <MyButton
+            icon={<DeleteOutlined />}
+            onClick={() => updateBasket({ img, name, price, quantity: 0 })}
+          />
         </div>
       )
     })
@@ -58,7 +62,11 @@ export const Basket: FC = () => {
           </>
         }
         width={800}
-        footer={<MyButton key="2" text="Заказать" onClick={() => {}} />}
+        footer={
+          !!Object.keys(basket).length && (
+            <MyButton key="2" text="Заказать" onClick={() => {}} />
+          )
+        }
         visible={modalOpened}
         onCancel={() => setModalOpened(false)}
       >
