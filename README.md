@@ -13,5 +13,10 @@
 1. Create **web project** in [**Firebase**](http://firebase.google.com/)
 2. Create **fb.config.js** in **/src** folder
 3. Copy **app configuration** from firebase project to fb.config.js
-4. Write **`NPM INSTALL`** your in CLI
-5. Write **`NPM START`**
+4. Import **firebase/app** and **firebase/db**
+
+[_Click here to open firebase docs_](https://firebase.google.com/docs/web/setup)
+
+
+5. Write **`NPM INSTALL`** in your CLI to download all required files
+6. Write **`NPM START`** to run the app
