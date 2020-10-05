@@ -2,7 +2,7 @@
 
 [The hosted version](https://react-sushi.web.app/)
 
-**To create the app was used:**
+**These stack of technologies were used to create the app:**
 1. **React**
 2. **TypeScript**
 3. [**Effector**](https://effector.now.sh/) as a state manager
