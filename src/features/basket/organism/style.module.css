@@ -12,6 +12,7 @@
   min-width: 150px;
   width: 100%;
   font-size: 24px;
+  text-align: center;
 }
 
 .bcard span:last-child {

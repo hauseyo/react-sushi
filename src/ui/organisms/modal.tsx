@@ -7,7 +7,7 @@ type Props = {
   width?: number
   visible: boolean
   onCancel: () => void
-  footer?: JSX.Element
+  footer?: JSX.Element | boolean
   children: JSX.Element[] | JSX.Element | (JSX.Element[] | JSX.Element)[]
 }
 
