@@ -10,7 +10,7 @@
 5. [**Firebase**](http://firebase.google.com/) as database and for hosting
 
 **To run the app:**
-1. Create **web project** in [**Firebase**](http://firebase.google.com/)
+1. Create a **web project** in [**Firebase**](http://firebase.google.com/)
 2. Create **fb.config.js** in **/src** folder
 3. Copy **app configuration** from firebase project to fb.config.js
 4. Import **firebase/app** and **firebase/db**
